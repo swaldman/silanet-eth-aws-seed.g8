@@ -1,0 +1,9 @@
+TL; DR: MAKE a 'secrets' directry!
+
+---
+
+It's intended that you should make a directory called 'secrets' here.
+
+Eventually it may be made automatically. But g8 won't do so, because
+the directory can't be in git, because it is (importantly!) in .gitignore.
+
