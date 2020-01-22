@@ -1,0 +1,5 @@
+**/target/
+tmp/*
+secrets
+sbt-ethereum.log*
+silanet.log*
