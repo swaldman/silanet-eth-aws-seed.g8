@@ -46,7 +46,7 @@ silanetNextSpecification := {
       defaultExtraIngressRules    = immutable.Set.empty[IngressRule],
       defaultInstanceType         = InstanceType.T2_MEDIUM,
       defaultInitialDataVolSizeGb = 16,
-      defaultKeyName              = "snowplow",
+      defaultKeyName              = "xxx",
       nodes                       = initialNodes,
       unmanagedNodes              = immutable.Set.empty[Enode],
       genesis                     = initialGenesis
@@ -67,6 +67,12 @@ silanetCertificateSource := {
 }
 */
 
+
+// Only required if you wish services to be exported by https
+// Needed to automatically set the session URL if all nonvalidators export only Https
+/*
+silanetHttpsNonvalidatorUrlHostName := "myhost.mydomain.com"
+*/ 
 
 // Only required if you want different credentials/ownership for different resources
 // Otherwise, just place your AWS credentials in their usual home
@@ -91,6 +97,9 @@ ethcfgPublicInsecureTestAccounts := immutable.Set(
 
 // so our faucet is our default account
 ethcfgAddressSender := "0xD72299b527f9a4bd075D2304C627d7CE21D32Cec"
+
+// so our chain is the current chain
+ethcfgNodeChainId := $chainId$
 
 // so sbt-ethereum doesn't ask us to make a wallet, download a compiler, on startup
 ethcfgSuppressInteractiveStartup := true 
