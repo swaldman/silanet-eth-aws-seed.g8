@@ -44,7 +44,7 @@ silanetNextSpecification := {
     UserSpecification (
       uid                         = specUid,
       adminRegion                 = Region.US_EAST_2,
-      adminRegionImageId          = "ami-0efd29da4bf75de3e", // updated swaldman 2020-01-22
+      adminRegionImageId          = "ami-0e4db27cde8053b9c", // updated swaldman 2020-02-09
       defaultSshCidrIpV4Range     = "0.0.0.0/0",
       defaultExtraIngressRules    = immutable.Set.empty[IngressRule],
       defaultInstanceType         = InstanceType.T2_MEDIUM,
