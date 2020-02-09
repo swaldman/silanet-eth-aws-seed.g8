@@ -18,16 +18,19 @@ silanetNextSpecification := {
 
   val initialNodes : immutable.Set[UserSpecification.Node] = immutable.Set (
     UserSpecification.Node.Validating (
-      uid    = "validator-0",
-      region = Region.US_EAST_2
+      uid       = "validator-0",
+      region    = Region.US_EAST_2,
+      // nondefaultVpc = Some( NondefaultVpc( vpcId = "vpc-0fe55ef77f1ff566e", subnetId = "subnet-04b599470c9b287e6" ) )
     ),
     UserSpecification.Node.Nonvalidating (
       uid                  = "public-0",
       region               = Region.US_EAST_2,
+      // elasticIp            = Some(IPAddress("3.20.134.190")),
       isArchive            = true,
       exportsWebSocket     = true,
       exportsBlockExplorer = true,
-      nginxProxyServices   = NginxProxyServices.Http // Https, Http, or Off, but for you'd need to provide certs (see below)
+      // nondefaultVpc = Some( NondefaultVpc( vpcId = "vpc-0fe55ef77f1ff566e", subnetId = "subnet-02c787aec5778062f" ) ),
+      nginxProxyServices   = NginxProxyServices.HttpsWithBasicAuth // Https, HttpsWithBasicAuth, Http, or Off, but for you'd need to provide certs (see below)
     )
   )
 
