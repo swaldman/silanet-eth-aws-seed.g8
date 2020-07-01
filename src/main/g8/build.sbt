@@ -41,19 +41,20 @@ silanetNextSpecification := {
 
   val initialGenesis = Default.genesis( faucets, chainId = $chainId$ )
 
-    UserSpecification (
-      uid                         = specUid,
-      adminRegion                 = Region.US_EAST_2,
-      adminRegionImageId          = "ami-0e4db27cde8053b9c", // updated swaldman 2020-02-09
-      defaultSshCidrIpV4Range     = "0.0.0.0/0",
-      defaultExtraIngressRules    = immutable.Set.empty[IngressRule],
-      defaultInstanceType         = InstanceType.T2_MEDIUM,
-      defaultInitialDataVolSizeGb = 16,
-      defaultKeyName              = "xxx",
-      nodes                       = initialNodes,
-      unmanagedNodes              = immutable.Set.empty[Enode],
-      genesis                     = initialGenesis
-    )
+  UserSpecification (
+    uid                             = specUid,
+    adminRegion                     = Region.US_EAST_2,
+    adminRegionImageId              = "ami-XXX",
+    defaultSshCidrIpV4Range         = "0.0.0.0/0",
+    defaultExtraIngressRules        = immutable.Set.empty[IngressRule],
+    defaultInstanceType             = InstanceType.T2_MEDIUM,
+    defaultInitialDataVolSizeGb     = 16,
+    defaultKeyName                  = "xxx",
+    nodes                           = initialNodes,
+    unmanagedPeers                  = immutable.Set.empty[Enode],
+    unmanagedPeersNonvalidatingOnly = immutable.Set.empty[Enode],
+    genesis                         = initialGenesis
+  )
 }
 
 // YOU DO NEED THIS
