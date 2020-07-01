@@ -6,7 +6,7 @@ import com.silamoney.silanet.eth.aws.Credentials // resolve ambiguity with sbt.C
 import com.mchange.sc.v1.consuela.ethereum.{EthAddress,EthPrivateKey}
 import com.mchange.sc.v1.consuela.ethereum.net.{Enode,IPv4Address,IPAddress}
 import software.amazon.awssdk.regions.Region
-import software.amazon.awssdk.services.ec2.model.InstanceType
+import software.amazon.awssdk.services.ec2.model.{AvailabilityZone,InstanceType}
 import scala.collection._
 
 name := "$name$"
