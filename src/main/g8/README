@@ -1,9 +1,17 @@
-TL; DR: MAKE a 'secrets' directry!
+TL; DR: MAKE a 'secrets' directry! Running the script './init.sh' will do that for you!
 
 ---
 
 It's intended that you should make a directory called 'secrets' here.
+You don't have to. You can leave your secrets elsewhere.
+
+But if you want everything consolidated here, use a 'secrets' directory
+for credentials, because it is already in '.gitignore' so you won't leak them to git.
 
 Eventually it may be made automatically. But g8 won't do so, because
 the directory can't be in git, because it is (importantly!) in .gitignore.
+
+There's a script here called "./init.sh" that will make the 'secrets' directory for you.
+
+
 
