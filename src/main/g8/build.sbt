@@ -30,7 +30,7 @@ silanetNextSpecification := {
       exportsWebSocket     = true,
       exportsBlockExplorer = true,
       // nondefaultVpc = Some( NondefaultVpc( vpcId = "vpc-0fe55ef77f1ff566e", subnetId = "subnet-02c787aec5778062f" ) ),
-      nginxProxyServices   = NginxProxyServices.HttpsWithBasicAuth // Https, HttpsWithBasicAuth, Http, or Off, but for any Https you'd need to provide certs (see below)
+      nginxProxyServices   = NginxProxyServices.Http // Https, HttpsWithBasicAuth, Http, or Off, but for any Https you'd need to provide certs (see below)
     )
   )
 
