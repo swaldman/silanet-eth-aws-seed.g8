@@ -43,14 +43,14 @@ silanetNextSpecification := {
 
   UserSpecification (
     uid                             = specUid,
-    adminRegion                     = Region.US_EAST_2,
-    adminRegionImageId              = "ami-xxx",
+    adminRegion                     = "$admin_region$",
+    adminRegionImageId              = "$admin_region_image_id$",
     defaultSshCidrIpV4Range         = "0.0.0.0/0",
     defaultExtraIngressRules        = immutable.Set.empty[IngressRule],
     defaultExtraAuthorizedKeys      = immutable.Set.empty[String],
     defaultInstanceType             = InstanceType.T2_MEDIUM,
     defaultInitialDataVolSizeGb     = 16,
-    defaultKeyName                  = "xxx",
+    defaultKeyName                  = "$default_key_name$",
     nodes                           = initialNodes,
     unmanagedPeers                  = immutable.Set.empty[Enode],
     unmanagedPeersNonvalidatingOnly = immutable.Set.empty[Enode],
@@ -62,7 +62,7 @@ silanetNextSpecification := {
 // modify this so that the keyname in your specification points to your keyfile.pem
 // it can, but does not have to be, in this secrets directory
 silanetKeyFiles := immutable.Map (
-  "xxx" -> new File("secrets/xxx.pem")
+  "$default_key_name$" -> new File("secrets/$default_key_name$.pem")
 )
 
 // Only required if you wish services to be exported by https
