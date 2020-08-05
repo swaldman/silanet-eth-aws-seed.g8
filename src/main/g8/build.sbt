@@ -19,12 +19,12 @@ silanetNextSpecification := {
   val initialNodes : immutable.Set[UserSpecification.Node] = immutable.Set (
     UserSpecification.Node.Validating (
       uid       = "validator-0",
-      region    = Region.US_EAST_2,
+      region    = Region.$admin_region$,
       // nondefaultVpc = Some( NondefaultVpc( vpcId = "vpc-0fe55ef77f1ff566e", subnetId = "subnet-04b599470c9b287e6" ) )
     ),
     UserSpecification.Node.Nonvalidating (
       uid                  = "public-0",
-      region               = Region.US_EAST_2,
+      region               = Region.$admin_region$,
       // elasticIp            = Some(IPAddress("3.20.134.190")),
       isArchive            = true,
       exportsWebSocket     = true,
@@ -43,7 +43,7 @@ silanetNextSpecification := {
 
   UserSpecification (
     uid                             = specUid,
-    adminRegion                     = "$admin_region$",
+    adminRegion                     = Region.$admin_region$,
     adminRegionImageId              = "$admin_region_image_id$",
     defaultSshCidrIpV4Range         = "0.0.0.0/0",
     defaultExtraIngressRules        = immutable.Set.empty[IngressRule],
