@@ -16,7 +16,7 @@ name := "$name$"
 silanetNextSpecification := {
   val specUid = name.value
 
-  val initialNodes : immutable.Set[UserSpecification.Node] = immutable.Set (
+  val _nodes : immutable.Set[UserSpecification.Node] = immutable.Set (
     UserSpecification.Node.Validating (
       uid       = "validator-0",
       region    = Region.$admin_region$,
@@ -51,7 +51,7 @@ silanetNextSpecification := {
     defaultInstanceType             = InstanceType.T2_MEDIUM,
     defaultInitialDataVolSizeGb     = 16,
     defaultKeyName                  = "$default_key_name$",
-    nodes                           = initialNodes,
+    nodes                           = _nodes,
     unmanagedPeers                  = immutable.Set.empty[Enode],
     unmanagedPeersNonvalidatingOnly = immutable.Set.empty[Enode],
     genesis                         = initialGenesis
